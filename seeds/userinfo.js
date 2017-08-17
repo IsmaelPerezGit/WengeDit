@@ -1,15 +1,13 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('users').del()
+  return knex('userinfo').del()
     .then(function () {
       // Inserts seed entries
-      return knex('users').insert([
-        { username: 'test', password: 'test', email:'fake@fake.net', age :21},
-        { username: 'bob', password: 'bob', email:'bob@fake.net', age :21},
-        { username: 'susy', password: 'susy', email:'susy@fake.net', age :21},
-        { username: 'ROBOTRON9001', password: 'Itsover9000', email:'robot@fake.net', age :21},
-        { username: 'admin', password: 'admin', email:'admin@fake.net', age :21}
+      return knex('userinfo').insert([
+        { first_name:'bob', last_name:'bobson',username: 'bob1234', password: 'bob', email:'bob@yahoo.net', age :21},
+        { first_name:'bill', last_name:'billson',username: 'bill4321', password: 'bill', email:'bill@netscape.net', age :33},
+        { first_name:'jesus', last_name:'christenson',username: 'jesus32', password: 'jesus', email:'jesus@sky.net', age :32},
       ]);
     });
 };
