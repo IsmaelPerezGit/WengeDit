@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var knex = require('../db/knex.js')
+var knex = require('../db/knex.js');
+var bcrypt = require('bcrypt');
 
 
 /* GET home page. */
@@ -34,7 +35,17 @@ router.get('/new_user', function(req, res, next) {
 });
 
 router.post('/new_user', function(req, res, next) {
-  if (req.body.res === req.body.confirm){} 
-});
+  if (req.body.password === req.body.confirm) {
+    bcrypt.hash(req.body.password, 8, function(err, hash) {
+      knex.raw(`insert into userinfo (first_name,last_name, username, password, email, age) values ('${req.body.firstname}','${req.body.lastname}','${req.body.username}','${hash}','${req.body.email}','${req.body.age}')`)
+        .then(function() {
+          res.send('SUCCESS!!!')
+        })
+    });
+  } else {
+    res.send('FAILLL!!')
+  };
+})
+
 
 module.exports = router;
