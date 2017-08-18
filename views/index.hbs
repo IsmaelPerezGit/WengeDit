@@ -4,7 +4,26 @@
 {{#each post}}
   <ul>
     <a href="/post/{{id}}">
-      <li>{{this.content}}</li>
+      <h2><li>{{this.content}}</li></h2>
+      <p>submitted by: {{this.username}}</p>
     </a>
   </ul>
 {{/each}}
+
+<form class="" action="/" method="get">
+  <input type="search" name="" value="Search">
+</form>
+<br>
+<form class="login" action="/login" method="post">
+  <input type="text" name="" value="username">
+  <input type="text" name="" value="password"><br>
+  <button type="button" name="button">Submit</button>
+</form>
+<br>
+<form class="" action="index.html" method="post">
+  <button type="button" name="button">Submit Link</button>
+</form>
+<br>
+<form class="" action="index.html" method="post">
+  <button type="button" name="button">Submit Text Post</button>
+</form>
