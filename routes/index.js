@@ -16,6 +16,14 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.get('/post', function(req, res, next) {
+      res.render('submitPost')
+    })
+
+router.get('/textpost', function(req, res, next) {
+      res.render('submitTextPost')
+    })
+
 //get individual story
 router.get('/post/:id', function(req, res, next) {
   knex.raw(`select * from postinfo join userinfo on userinfo.id = postinfo.user_id join commentinfo on commentinfo.post_id = postinfo.id where postinfo.id = ${req.params.id};`)
@@ -29,8 +37,5 @@ router.get('/post/:id', function(req, res, next) {
       console.log(data.rows[0]);
     })
 });
-
-
-
 
 module.exports = router;

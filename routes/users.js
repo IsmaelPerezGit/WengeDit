@@ -9,7 +9,7 @@ var bcrypt = require('bcrypt');
 //   res.render('index');
 // });
 
-//login form
+//Post login form
 router.post('/login', function(req, res, next) {
   console.log(req.body)
   knex.raw(`SELECT * FROM userinfo WHERE username = '${req.body.username}'`)
@@ -40,7 +40,7 @@ router.post('/new_user', function(req, res, next) {
         })
     });
   } else {
-    res.send('FAILLL!!')
+    res.send('Something went wrong!!')
   };
 })
 

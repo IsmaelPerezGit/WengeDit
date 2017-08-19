@@ -9,25 +9,21 @@
     </a>
   </ul>
 {{/each}}
-
+<br>
 <form class="" action="/" method="get">
   <input type="search" name="" placeholder="Search">
 </form>
 <br>
-
-<h1>login</h1>
 <form class="" action="/users/login" method="post">
   <input type="text" name="username" placeholder="username">
   <input type="password" name="password" placeholder="password"><br>
-  <button type="submit" name="button">Submit</button>
+  <button type="submit" name="button">Login</button>
 </form>
 <br>
-
-<form class="" action="index.html" method="post">
-  <button type="button" name="button">Submit Link</button>
+<form class="" action="/post" method="get">
+  <button type="submit" name="button">Submit Link</button>
 </form>
 <br>
-
-<form class="" action="index.html" method="post">
-  <button type="button" name="button">Submit Text Post</button>
+<form class="" action="/textpost" method="get">
+  <button type="submit" name="button">Submit Text Post</button>
 </form>
