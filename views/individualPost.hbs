@@ -1,3 +1,8 @@
 <h1>{{postTitle}}</h1>
 <h2>{{storyTitle}}</h2>
-<h5>{{comment}}</h5>
+
+{{#each comment}}
+<ul>
+  <li>{{this.comment_content}}</li>
+</ul>
+{{/each}}
