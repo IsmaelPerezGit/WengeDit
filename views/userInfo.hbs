@@ -1,0 +1,12 @@
+<h1>Welcome {{userinfo.first_name}}</h1>
+
+
+<form class="" action="/" method="get">
+  <button type="submit" name="button1">Home</button>
+</form><br>
+<form class="" action="/users/{{this.id}}/update" method="get">
+  <button type="submit" name="button2">Update Information</button>
+</form><br>
+<form class="" action="{{this.id}}/delete" method="post">
+  <input type="submit" value="Delete Account">
+</form>

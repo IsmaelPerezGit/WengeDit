@@ -1,5 +1,6 @@
+
+
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
 
 {{#each post}}
   <ul>
@@ -9,6 +10,7 @@
     </a>
   </ul>
 {{/each}}
+
 <br>
 <form class="" action="/" method="get">
   <input type="search" name="" placeholder="Search">
@@ -20,10 +22,10 @@
   <button type="submit" name="button">Login</button>
 </form>
 <br>
-<form class="" action="/post" method="get">
+<form class="" action="/post/new" method="get">
   <button type="submit" name="button">Submit Link</button>
 </form>
 <br>
-<form class="" action="/textpost" method="get">
+<form class="" action="/post/newtextpost" method="get">
   <button type="submit" name="button">Submit Text Post</button>
 </form>
